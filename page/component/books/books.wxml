@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<!-- 图书展示容器 -->
+<view class="book-container">
+  <!-- 图书单元区域 -->
+  <view class="box" wx:for="{{bookList}}" wx:key="book{{index}}" data-id="{{item._id}}" bindtap="showBookIntro">
+    <!-- 图书封面 -->
+    <image src="{{item.coverurl}}"></image>
+    <!-- 图书标题 -->
+    <text>{{item.title}}</text>
+  </view>
+
+</view>

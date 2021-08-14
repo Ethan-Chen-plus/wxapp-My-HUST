@@ -1,0 +1,13 @@
+<!--pages/game/game.wxml-->
+<!--拼图的game-->
+<view class="container">
+  <!-- 顶端提示图 -->
+  <view class="title">提示图</view>
+  <image src="{{url}}"></image>
+
+  <!-- 游戏区域 -->
+  <canvas canvas-id="myCanvas" bindtouchstart="touchBox"></canvas>
+
+  <!-- 重新开始按钮 -->
+  <button type="warn" bindtap="restartGame">重新开始</button>
+</view>

@@ -1,0 +1,42 @@
+/* pages/intro/intro.wxss */
+/* 下载时蒙层容器 */
+.loading-container{
+  height: 100vh;
+  background-color: silver;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* 进度条 */
+progress{
+  width:80%;
+}
+
+/* 图书详情容器 */
+.intro-container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* 图书封面图片 */
+.intro-container image{
+  width: 400rpx;
+  margin: 20rpx;
+}
+
+/* 图书信息区域 */
+.intro-box{
+  display: flex;
+  flex-direction: column;
+}
+
+/* 图书文字信息 */
+.intro-box text{
+  margin: 20rpx;
+}
+

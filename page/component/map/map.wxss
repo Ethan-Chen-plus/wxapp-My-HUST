@@ -1,0 +1,81 @@
+page{
+  background: #ebebeb;
+}
+map{
+  width: 100%;
+  height:800rpx;
+}
+
+#swiper_area{
+  background: white;
+  margin-top: 0.2em;
+  padding-top: 10px;
+}
+
+
+.box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.img{
+  width: 100%;
+  /*height: 12em;*/
+}
+
+.title{
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.tips{
+  width: 100%;
+  text-align: center;
+  color: gray;
+  padding: 5px 0px 5px 0px;
+  font-size: 0.8em;
+}
+
+.info{
+  text-align: center;
+  padding: 10px;
+}
+
+.itemtext_title{
+  font-weight: 700;
+}
+
+.address{
+  display: block;
+  color: gray;
+}
+.sub_title{
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  color: darkorange;
+  float: right;
+}
+
+.line{
+  height: 1px;
+  background: limegreen;
+  margin-bottom: 5px;
+  padding: 0px 10px;
+}
+
+.support_info{
+  text-align: right;
+  padding-right: 10px;
+}
+
+.support_info image{
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 10px;
+}
+.support_info text{
+  font-size: 0.8em;
+  color: gray;
+  padding-left: 3px;
+}

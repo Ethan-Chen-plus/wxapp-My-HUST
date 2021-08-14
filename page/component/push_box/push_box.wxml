@@ -1,0 +1,12 @@
+<view class="main">
+    <view class="banner">
+        <image src="http://qungz.photo.store.qq.com/qun-qungz/V50aJmRq1dcwF60mjBDu1MbJ252KftiN/V5bCQA3ODY2MDkwNjbeUhdhtIehHQ!!/800?w5=900&h5=383&rf=viewer_421"></image>
+    </view>
+
+    <view class="list-box">
+        <view class="newest-list" wx:for="{{levels}}" wx:key="levels{{index}}" bindtap="chooseLevel" data-level="{{index}}">
+        <image src="/image/{{item}}"></image>
+        <view class="newest-text"><text>第{{index+1}}关</text></view>
+        </view>
+    </view>
+</view>

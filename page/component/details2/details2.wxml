@@ -1,0 +1,31 @@
+<view class="main">
+    <view class="goods-box">
+        <!--区域1：视频播放器-->
+        <video id='myVideo' src='{{src}}'></video>
+        <!--区域2：弹幕控制-->
+        <view class='danmuArea'>
+            <input type='text' placeholder='请输入弹幕内容' bindinput="getDanmu"></input>
+            <button bindtap='sendDanmu'>发送弹幕</button>
+        </view>
+        <!--区域3：视频列表-->
+        <view class=''>
+            <view class="videoBar" wx:for='{{list}}' wx:key='video{{index}}' data-url='{{item.videoUrl}}' bindtap='playVideo'>
+                <image src='/image/play.png'></image>
+                <text>{{item.title}}</text>
+            </view>
+        </view>
+        <view class="goods-stock">{{goods.stock}}</view>
+        <view class="goods-title">{{goods.title}}</view>
+        <view class="goods-price">{{goods.price}}</view>
+    </view>
+    <view class="goods-tab-box">
+        <view class="goods-tab-nav {{curIndex === 0 ?'on':''}}" bindtap="bindTap" data-index="0">详情</view>
+        <view class="goods-tab-nav {{curIndex === 1 ?'on':''}}" bindtap="bindTap" data-index="1">文化展板</view>
+        <view class="goods-tab-nav {{curIndex === 2 ?'on':''}}" bindtap="bindTap" data-index="2">历史回顾</view>
+        <view class="goods-content">
+            <view wx:if="{{curIndex === 0}}">{{goods.detail}}</view>
+            <view wx:if="{{curIndex === 1}}">{{goods.parameter}}</view>
+            <view wx:if="{{curIndex === 2}}">{{goods.service}}</view>
+        </view>
+    </view>
+</view>

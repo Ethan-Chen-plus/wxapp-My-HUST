@@ -1,0 +1,88 @@
+<!--主盒子-->
+<view class="main">
+<!--左侧栏-->        
+        <!--当前项的id等于item项的id，那个就是当前状态-->
+        <!--用data-index记录这个数据在数组的下标位置，使用data-id设置每个item的id值，供打开2级页面使用-->
+        <view class="categroy-left">
+        <view wx:for="{{category}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}"
+            bindtap="switchTab"
+            class="cate-list {{curIndex === index?'on':''}}">{{item.name}}</view>
+    </view>
+    <!--右侧栏-->
+    <scroll-view class="categroy-right" scroll-y="{{isScroll}}" scroll-into-view="{{toView}}" scroll-with-animation="true">
+        <block wx:for="{{detail}}" wx:for-index wx:key="idx">
+            <view id="{{item.id}}" class="cate-box">
+                <view class="cate-banner">
+                    <image src="{{item.banner}}"></image>
+                </view>
+                <view class="cate-title">
+                    <text>{{item.cate}}</text>
+                </view>
+                <view class="product">
+                    <view class="product-list" wx:for="{{item.detail}}" wx:key="index" wx:for-item="val">
+                        <navigator url="{{val.url}}">
+                            <image src="{{val.thumb}}"></image>
+                            <view class="classname"><text>{{val.name}}</text></view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </block>
+
+         <!--<block wx:for="{{detail}}" wx:for-index wx:key="idx">
+            <view id="{{item.id}}" class="cate-box">
+                <view class="cate-banner">
+                    <image src="{{item.banner}}"></image>
+                </view>
+                <view class="cate-title">
+                    <text>{{item.cate}}</text>
+                </view>
+                <view class="product">
+                    <view class="product-list" wx:for="{{item.detail}}" wx:key="index" wx:for-item="val">
+                        <navigator url="../list/list">
+                            <image src="{{val.thumb}}"></image>
+                            <view class="classname"><text>{{val.name}}</text></view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </block> -->
+        <!-- <block>
+            <view id="guowei" class="cate-box">
+                <view class="cate-banner">
+                    <image src="/image/c1.png"></image>
+                </view>
+                <view class="cate-title">
+                    <text>果味</text>
+                </view>
+                <view class="product">
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/c2.png"></image>
+                            <view class="classname"><text>梨花带雨 3个</text></view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <block>
+            <view id="shucai" class="cate-box">
+                <view class="cate-banner">
+                    <image src="/image/c1.png"></image>
+                </view>
+                <view class="cate-title">
+                    <text>蔬菜</text>
+                </view>
+                <view class="product">
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/c2.png"></image>
+                            <view class="classname"><text>梨花带雨 3个</text></view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </block> -->
+    </scroll-view>
+
+</view>

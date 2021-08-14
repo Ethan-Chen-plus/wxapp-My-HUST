@@ -1,0 +1,11 @@
+<view class="main">
+    <image src='http://qungz.photo.store.qq.com/qun-qungz/V50aJmRq1dcwF60mjBDu1MbJ252KftiN/V5bCQA3ODY2MDkwNjbHpBdhhvS*Gw!!/800?w5=375&h5=667&rf=viewer_421'></image>
+    <!--<view class="form-box">
+        <form bindsubmit="formSubmit">
+            <input value="{{address.name}}" name="name" placeholder="姓名"/>
+            <input type="number" name="phone" value="{{address.phone}}" placeholder="电话号码"/>
+            <input name="detail" value="{{address.detail}}" placeholder="详细地址"/>
+            <button form-type="submit">保存</button>
+        </form>
+    </view>-->
+</view>

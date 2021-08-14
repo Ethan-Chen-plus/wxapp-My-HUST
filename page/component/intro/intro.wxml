@@ -1,0 +1,24 @@
+<!--pages/intro/intro.wxml-->
+<!-- 下载时蒙层容器 -->
+<view class="loading-container" wx:if="{{isDownloading}}">
+  <text>下载中，请稍后</text>
+  <progress percent="{{percentNum}}" stroke-width="6" activeColor="#663366" backgroundColor="#ffffff" show-info active active-mode="forwards"></progress>
+</view>
+
+<!-- 图书详情页容器 -->
+<view class="intro-container" wx:else>
+  <!-- 图书封面图片 -->
+  <image src="{{book.coverurl}}" mode="widthFix"></image>
+
+  <!-- 图书信息介绍 -->
+  <view class="intro-box">
+     <text>书名：{{book.title}}</text>
+     <text>作者：{{book.author}}</text>
+     <text>价格：免费阅读<!--{{book.price}}--></text>
+     <!--<text>ISBN：{{book.isbn}}</text>-->
+  </view>
+
+  <!-- 开始阅读按钮 -->
+  <button type="warn" bindtap="readBook">开始阅读</button>
+
+</view>

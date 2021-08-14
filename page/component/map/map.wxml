@@ -1,0 +1,19 @@
+<view >
+  <view class="content">
+    <map latitude="{{lat}}" longitude="{{lon}}"  markers='{{markers}}'  bindmarkertap="clickme" enable-3D="true" scale='14' subkey='KEIBZ-NOIW2-5NXUZ-CY3VW-Z47KT-EIFEL'></map>
+  </view>
+ <!--屏幕背景变暗的背景  -->
+  <!--<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>-->
+  <!--弹出框  -->
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{!showModalStatus}}"> 请点击地图小标查看详情</view>
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+    <view class="tips">请上下滑动下面查看详情↓↓↓</view>
+
+    <view class="title">{{showText}}</view>
+    <view class="box">  
+      <view>{{nowText}}</view>
+      <image src="{{nowUrl}}"></image>
+    </view>
+
+  </view>
+</view>
